@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Main window</title>
+        <script>window.$ = window.jQuery = require('jquery');</script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="base.js"></script>
+        <div id="background">
+            <div class="container" id="main"></div>
+
+            <div id="footer">
+                <div class="footer-background"></div>
+                <div class="path"></div>
+            </div>
+
+            <div id="content">
+                <script>loadPage('mainWindow.html');</script>
+            </div>
+        </div>
+    </body>
+</html>

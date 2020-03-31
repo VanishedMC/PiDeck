@@ -1,0 +1,418 @@
+{
+    "homePage": {
+        "buttons": [{
+            "text": "",
+            "icon": "memes/meme.png",
+            "action": {
+                "type": "openFolder",
+                "payload": "memes"
+            }
+        },
+        {
+            "text": "",
+            "icon": "soundboard/speaker.webp",
+            "action": {
+                "type": "openFolder",
+                "payload": "soundboard"
+            }
+        },
+        {
+            "text": "",
+            "icon": "skynode/skynode.png",
+            "action": {
+                "type": "openFolder",
+                "payload": "skynode"
+            }
+        }],
+        "displayName": "Home page",
+        "name": "homePage"
+    },
+    "memes": {
+        "buttons": [{
+            "text": "",
+            "icon": "memes/copypaste.png",
+            "action": {
+                "type": "openFolder",
+                "payload": "copypaste"
+            }
+        }],
+        "displayName": "Memes",
+        "name": "memes",
+        "parentFolder": "homePage"
+    },
+    "copypaste": {
+        "buttons": [
+            {
+                "text": "Lyrics",
+                "icon": "..",
+                "action": {
+                    "type": "openFolder",
+                    "payload": "lyrics"
+                }
+            },
+            {
+                "text": "Reddit",
+                "icon": "..",
+                "action": {
+                    "type": "openFolder",
+                    "payload": "redditCopyPasta"
+                }
+            }
+        ],
+        "displayName": "Copy pastas",
+        "name": "copypaste",
+        "parentFolder": "memes"
+    },
+    "lyrics": {
+        "buttons": [
+            {
+                "text": "Bee movie",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'beemovie')"
+                }
+            },
+            {
+                "text": "Never gonna give you up",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'rickroll')"
+                }
+            },
+            {
+                "text": "Russian anthem",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'russia')"
+                }
+            },
+            {
+                "text": "Moskau",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'moskau')"
+                }
+            },
+            {
+                "text": "Allstars",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'allstars')"
+                }
+            }
+        ],
+        "displayName": "Lyrics",
+        "name": "lyrics",
+        "parentFolder": "copypaste"
+    },
+    "redditCopyPasta": {
+        "buttons": [
+            {
+                "text": "Racism",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'racism')"
+                }
+            },
+            {
+                "text": "Cum",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'cum')"
+                }
+            },
+            {
+                "text": "r/woooosh",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'woosh')"
+                }
+            },
+            {
+                "text": "Man",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'man')"
+                }
+            },
+            {
+                "text": "UwU",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'uwu')"
+                }
+            },
+            {
+                "text": "Gru",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'gru')"
+                }
+            },
+            {
+                "text": "Navy seal",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'navyseal')"
+                }
+            },
+            {
+                "text": "Ok boomer",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'boomer')"
+                }
+            },
+            {
+                "text": "Mobile User",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('copypaste', 'mobileUser')"
+                }
+            }
+        ],
+        "displayName": "Reddit",
+        "name": "redditCopyPasta",
+        "parentFolder": "copypaste"
+    },
+    "soundboard": {
+        "buttons": [],
+        "displayName": "Sound board",
+        "name": "soundboard",
+        "parentFolder": "homePage"
+    },
+    "skynode": {
+        "buttons": [
+            {
+                "text": "Setup",
+                "icon": "skynode/setup.png",
+                "action": {
+                    "type": "openFolder",
+                    "payload": "skynodeSetup"
+                }
+            },
+            {
+                "text": "Plugins",
+                "icon": "skynode/plugins.png",
+                "action": {
+                    "type": "openFolder",
+                    "payload": "skynodePlugins"
+                }
+            },
+            {
+                "text": "Vps",
+                "icon": "skynode/vps.png",
+                "action": {
+                    "type": "openFolder",
+                    "payload": "skynodeVps"
+                }
+            },
+            {
+                "text": "General Information",
+                "icon": "skynode/general_information.png",
+                "action": {
+                    "type": "openFolder",
+                    "payload": "skynodeGeneralInformation"
+                }
+            },
+            {
+                "text": "",
+                "icon": "skynode/youtube.jpg",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'youtube')"
+                }
+            }
+        ],
+        "displayName": "Skynode shortcuts",
+        "name": "skynode",
+        "parentFolder": "homePage"
+    },
+    "skynodeSetup": {
+        "buttons": [
+            {
+                "text": "Installing jar file",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'setup_jarfile')"
+                }
+            },
+            {
+                "text": "SFTP",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'setup_sftp')"
+                }
+            },
+            {
+                "text": "Installing forge",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'setup_forge')"
+                }
+            },
+            {
+                "text": "Upload custom world",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'setup_world')"
+                }
+            },
+            {
+                "text": "Custom domain",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'setup_domain')"
+                }
+            },
+            {
+                "text": "Diagnosing issues",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'setup_diagnose')"
+                }
+            },
+            {
+                "text": "Server icon",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'setup_icon')"
+                }
+            },
+            {
+                "text": "Subusers",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'setup_subusers')"
+                }
+            },
+            {
+                "text": "Custom resource pack",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'setup_resourcepack')"
+                }
+            }
+
+        ],
+        "displayName": "Setup",
+        "name": "skynodeSetup",
+        "parentFolder": "skynode"
+    },
+    "skynodePlugins": {
+        "buttons": [
+            {
+                "text": "How to install plugins",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'plugins_install')"
+                }
+            },
+            {
+                "text": "Votifier",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'plugins_votifier')"
+                }
+            }
+        ],
+        "displayName": "Plugins",
+        "name": "skynodePlugins",
+        "parentFolder": "skynode"
+    },
+    "skynodeVps": {
+        "buttons": [
+            {
+                "text": "Multicraft",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'vps_multicraft')"
+                }
+            },
+            {
+                "text": "Setup SSH keys",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'vps_setupKeys')"
+                }
+            },
+            {
+                "text": "Login with SSH keys",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'vps_loginKeys')"
+                }
+            },
+            {
+                "text": "PuTTy",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'vps_putty')"
+                }
+            }
+        ],
+        "displayName": "Vps",
+        "name": "skynodeVps",
+        "parentFolder": "skynode"
+    },
+    "skynodeGeneralInformation": {
+        "buttons": [
+            {
+                "text": "Upgrade / downgrade",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'general_changePlan')"
+                }
+            },
+            {
+                "text": "Cancel subscription",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'general_cancel')"
+                }
+            },
+            {
+                "text": "Best plan",
+                "icon": "..",
+                "action": {
+                    "type": "js",
+                    "payload": "command('skynode', 'general_bestPlan')"
+                }
+            }
+        ],
+        "displayName": "General information",
+        "name": "skynodeGeneralInformation",
+        "parentFolder": "skynode"
+    }
+}

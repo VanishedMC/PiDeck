@@ -1,0 +1,9 @@
+<script>
+    $('#background').prepend(`<iframe frameborder="0" src="http://mine.star" width="800" height="480"></iframe>`);
+    //$('#main').css({'margin-top': '0px', 'height': '480px'});
+    $('.path').html(`<a onclick="removeIframe(); loadPage('mainWindow.html');">Home folder</a> / <a onclick="removeIframe(); loadPage('mainWindow.html', 'minestar');">Minestar</a> / Trello`);
+
+    function removeIframe() {
+        $("iframe").remove();
+    }
+</script>

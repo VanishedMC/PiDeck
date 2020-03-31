@@ -1,0 +1,47 @@
+<script>
+    var loadFolder = function(folder) {
+        $.getJSON('http://pi.deck:42069/data.json', function(pideck) {
+            $('#main').empty();
+            $('#main').append('<div id="topRow"></div><div id="bottomRow" style="position: absolute; bottom: 100px; width: 100%"></div>');
+
+            let folderData = pideck[folder];
+            let buttons = folderData.buttons;
+
+            let top = $("#topRow");
+            let bottom = $("#bottomRow");
+
+            for (var i = 0; i < buttons.length; i++) {
+                let button = buttons[i];
+                let buttonElement = $('<button> </button>').text(button.text);
+                if(button.icon == "..") {
+                    $(buttonElement).addClass('border');
+                } else {
+                    $(buttonElement).css('background-image', `url(http://pi.deck:42069/img/${button.icon})`);
+                }
+                $(buttonElement).css('background-size', '128px 128px');
+                
+                if(button.action.type == 'openFolder') {
+                    buttonElement.click(function() {
+                        loadFolder(button.action.payload);
+                    });
+                } else if(button.action.type == 'js') {
+                    buttonElement.attr('onclick', button.action.payload);
+                } else if(button.action.type == 'openPage') {
+                    buttonElement.click(function() {
+                        loadPage(button.action.payload);
+                    });
+                }
+
+                if(i < 5) {
+                    $(top).append(buttonElement);
+                } else if(i < 10){
+                    $(bottom).append(buttonElement);
+                }
+            }
+
+            updateFolderPath(folderData.name); 
+        });
+    }
+
+    loadFolder('homePage');
+</script>

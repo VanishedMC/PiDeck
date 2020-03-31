@@ -1,0 +1,123 @@
+* {
+    overflow: hidden;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 20px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    scrollbar-width: none;
+}
+
+.hideCursor {
+    cursor: none!important;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#background {
+    background-color: #828282;
+    margin: 0px;
+    padding: 0px;
+    width: 800px;
+    height: 480px;
+    background-image: url('img/background.png');
+    background-size: cover;
+}
+
+#notesList {
+    margin: 0px;
+}
+
+#notesDiv {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    height: 405px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 55px;
+    position: relative;
+}
+
+.container > div#topRow, div#bottomRow {
+    display: grid;
+    grid-template-columns: 160px 160px 160px 160px 160px;
+    margin: auto;
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 128px;
+    height: 128px;
+    border: none;
+    color: white;
+    background: none;
+    border-radius: 50%;
+}
+
+button.border {
+    border: 1px solid darkgray;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#footer {
+    position: absolute;
+    width: 800px;
+    height: 75px;
+    bottom: 10px;
+}
+
+.footer-background {
+    background-color: #353535;
+    border-radius: 25px;
+    width: 98%;
+    left: 1%;
+    height: 100%;
+    opacity: 0.7;
+    position: absolute;
+}
+
+.path {
+    position: absolute;
+    color: white;
+    top: 25px;
+    left: 20px;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+    color: white;
+}
+
+ul li::before {
+    content: "\2022";
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}

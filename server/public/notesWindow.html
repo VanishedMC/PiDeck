@@ -1,0 +1,28 @@
+<script>
+    $('.path').html(`<a onclick="loadPage('mainWindow.html');">Home folder</a> / Notes`);
+    $('#main').append(`<div id="notesDiv"><ul id="notesList"></ul><button onclick="add()">Add note</button></div>`);
+
+    socket.on('notes', (data) => {
+        $('#notesList').html('');
+        for(var i = 0; i < data.length; i++) {
+            var note = data[i];
+            var title = note.description.split('\\n')[0];
+            var descrition = note.description.replace(new RegExp('\\n', 'g'), '\n');
+            $('#notesList').append(`<li><span class="note" id="${note.id}" onclick="openNote(${note.id})">${title}</span></li>`);
+        }
+    });
+
+    var openNote = function(note) {
+        console.log(note);
+    }
+
+    var deleteNote = function(note) {
+        command('notes', {type: 'delete', payload: note.id});
+    }
+
+    var add = function() {
+        command('notes', {type: 'add'});
+    }
+
+    command('notes', {type: 'get'});
+</script>
